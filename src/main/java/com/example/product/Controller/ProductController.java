@@ -28,6 +28,7 @@ public class ProductController {
     public ResponseEntity<ProductResponse> addProduct(@RequestBody ProductRequest request) {
         logger.info("Requesting to add product: {}", request.getProductName());
         ProductResponse response = service.addProduct(request);
+        logger.info("Adding new product........");
         return new ResponseEntity<>(response, HttpStatus.CREATED);// 201 Created
     }
 
