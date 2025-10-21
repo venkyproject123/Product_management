@@ -31,7 +31,7 @@ public class ProductService {
         product.setProductName(request.getProductName());
         product.setProductPrice(request.getProductPrice());
         product.setStockAvailability(request.isStockAvailability());
-
+        logger.info("-------------------------------");
         Product saved = repository.save(product);
         logger.debug(" The product saved successfully......The saved product is: {}", saved);
 
